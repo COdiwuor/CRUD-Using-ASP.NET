@@ -46,7 +46,7 @@ namespace ASPNETCRUD.Controllers
             await mvcDemoDbContext.SaveChangesAsync();
             return RedirectToAction("Index");
         }
-
+        //Method for viewing/read
         [HttpGet]
         public async Task<IActionResult> View(Guid id) 
         {
@@ -92,7 +92,6 @@ namespace ASPNETCRUD.Controllers
 
         //Method for Deleting
         [HttpPost]
-
         public async Task<IActionResult> Delete(UpdateEmployeeViewModel model)
         {
             var employee =  await mvcDemoDbContext.Employees.FindAsync(model.Id);
