@@ -91,7 +91,7 @@ namespace ASPNETCRUD.Controllers
         }
 
         //Method for Deleting
-        [HttpDelete]
+        [HttpPost]
 
         public async Task<IActionResult> Delete(UpdateEmployeeViewModel model)
         {
