@@ -16,7 +16,6 @@ namespace ASPNETCRUD.Controllers
         }
 
         [HttpGet]
-
         public async Task<IActionResult> Index()
         {
             var employees =  await mvcDemoDbContext.Employees.ToListAsync();
