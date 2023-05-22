@@ -40,6 +40,7 @@ namespace ASPNETCRUD.Controllers
                 Salary = addEmployeeRequest.Salary,
                 DateOfBirth = addEmployeeRequest.DateOfBirth,
                 Department = addEmployeeRequest.Department,
+                //Gender = addEmployeeRequest.Gender,
             };
 
             await mvcDemoDbContext.Employees.AddAsync(employee); 
@@ -62,6 +63,7 @@ namespace ASPNETCRUD.Controllers
                     Salary = employee.Salary,
                     DateOfBirth = employee.DateOfBirth,
                     Department = employee.Department,
+                    //Gender = employee.Gender,
                 };
 
                 return await Task.Run(() => View("View" ,viewModel));
@@ -82,6 +84,7 @@ namespace ASPNETCRUD.Controllers
                 employee.Salary = model.Salary;
                 employee.DateOfBirth = model.DateOfBirth;
                 employee.Department = model.Department;
+                //employee.Gender = model.Gender;
 
                 await mvcDemoDbContext.SaveChangesAsync();
 
